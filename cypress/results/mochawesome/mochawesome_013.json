@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-03-19T08:32:35.475Z",
+    "end": "2022-03-19T08:32:41.120Z",
+    "duration": 5645,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3402dbac-2778-4d7a-9a4a-d1ac533dcc1b",
+      "title": "",
+      "fullFile": "cypress/integration/testScripts/shadow.spec.js",
+      "file": "cypress/integration/testScripts/shadow.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1407f20f-f964-4f4b-a9c0-498d4ae0139e",
+          "title": "First URL Sample",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Handling iFrame - plugin",
+              "fullTitle": "First URL Sample Handling iFrame - plugin",
+              "timedOut": null,
+              "duration": 3505,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/iframe');\ncy.frameLoaded('#mce_0_ifr');\ncy.iframe().clear().type('Using iFrame cypress plugin');",
+              "err": {},
+              "uuid": "a97f23a4-a68a-44c0-92b8-d614c2f276f6",
+              "parentUUID": "1407f20f-f964-4f4b-a9c0-498d4ae0139e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a97f23a4-a68a-44c0-92b8-d614c2f276f6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3505,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.1.1"
+    }
+  }
+}

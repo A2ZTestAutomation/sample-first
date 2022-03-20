@@ -1,0 +1,768 @@
+{
+  "stats": {
+    "suites": 12,
+    "tests": 12,
+    "passes": 6,
+    "pending": 0,
+    "failures": 6,
+    "start": "2022-03-19T06:53:21.529Z",
+    "end": "2022-03-19T08:14:58.966Z",
+    "duration": 33085,
+    "testsRegistered": 12,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7d3b545c-5934-4d14-a1c1-e37998ba5b23",
+      "title": "",
+      "fullFile": "cypress/integration/testScripts/firstUrl.spec.js",
+      "file": "cypress/integration/testScripts/firstUrl.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "17389a10-a7fb-4d53-9113-7e39389688e0",
+          "title": "First URL Sample",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "URL Test",
+              "fullTitle": "First URL Sample URL Test",
+              "timedOut": null,
+              "duration": 4803,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://books.toscrape.com/');\ncy.url().should('include', 'books'); // cy.contains('Travel').click()\ncy.get('a').contains('Travel').click();\ncy.log('Navigated to Travel Page....');",
+              "err": {},
+              "uuid": "962f2128-89ba-40fd-9959-566f640eabb8",
+              "parentUUID": "17389a10-a7fb-4d53-9113-7e39389688e0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "962f2128-89ba-40fd-9959-566f640eabb8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4803,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "2575dd94-d6af-4d81-a280-907e6ab0ddeb",
+      "title": "",
+      "fullFile": "cypress/integration/testScripts/findWebElem.spec.js",
+      "file": "cypress/integration/testScripts/findWebElem.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5a91a902-4816-478f-938e-a8049979c45b",
+          "title": "Finding diff WebElements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Handling tooltips",
+              "fullTitle": "Finding diff WebElements Handling tooltips",
+              "timedOut": null,
+              "duration": 915,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Modal & Overlays').click();\ncy.contains('Tooltip').click();\ncy.get('[data-name=\"menu-2\"]').click();\ncy.contains('nb-card', 'Colored Tooltips').contains('Default').click();\ncy.get('nb-tooltip').should('contain', 'This is a tooltip');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:4200/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:4200\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Finding diff WebElements`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:4200/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:4200\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Finding diff WebElements`\n    at http://localhost:63990/__cypress/runner/cypress_runner.js:159318:82\n    at visitFailedByErr (http://localhost:63990/__cypress/runner/cypress_runner.js:158668:12)\n    at http://localhost:63990/__cypress/runner/cypress_runner.js:159317:11\n    at tryCatcher (http://localhost:63990/__cypress/runner/cypress_runner.js:13022:23)\n    at Promise._settlePromiseFromHandler (http://localhost:63990/__cypress/runner/cypress_runner.js:10957:31)\n    at Promise._settlePromise (http://localhost:63990/__cypress/runner/cypress_runner.js:11014:18)\n    at Promise._settlePromise0 (http://localhost:63990/__cypress/runner/cypress_runner.js:11059:10)\n    at Promise._settlePromises (http://localhost:63990/__cypress/runner/cypress_runner.js:11135:18)\n    at _drainQueueStep (http://localhost:63990/__cypress/runner/cypress_runner.js:7729:12)\n    at _drainQueue (http://localhost:63990/__cypress/runner/cypress_runner.js:7722:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:63990/__cypress/runner/cypress_runner.js:7738:5)\n    at Async.drainQueues (http://localhost:63990/__cypress/runner/cypress_runner.js:7608:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:63990/__cypress/tests?p=cypress\\integration\\testScripts\\findWebElem.spec.js:102:8)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:4200\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1142:16)\n  ",
+                "diff": null
+              },
+              "uuid": "e6dfaa63-81af-46d5-bf9b-32df0fca7df7",
+              "parentUUID": "5a91a902-4816-478f-938e-a8049979c45b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "e6dfaa63-81af-46d5-bf9b-32df0fca7df7"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 915,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ca0db002-e13d-4287-b978-1d26ddfcf454",
+      "title": "",
+      "fullFile": "cypress/integration/testScripts/firstUrl.spec.js",
+      "file": "cypress/integration/testScripts/firstUrl.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c59e2a88-3b7b-473a-825f-6fd12e109ac9",
+          "title": "First URL Sample",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "URL Test",
+              "fullTitle": "First URL Sample URL Test",
+              "timedOut": null,
+              "duration": 4654,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://books.toscrape.com/');\ncy.url().should('include', 'books'); // cy.contains('Travel').click()\ncy.get('a').contains('Travel').click();\ncy.log('Navigated to Travel Page....');",
+              "err": {},
+              "uuid": "ce271604-4c27-4b44-a358-003dc7d42474",
+              "parentUUID": "c59e2a88-3b7b-473a-825f-6fd12e109ac9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ce271604-4c27-4b44-a358-003dc7d42474"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4654,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "0a2925f0-dd5b-4d6c-826f-4a1e769c2504",
+      "title": "",
+      "fullFile": "cypress/integration/testScripts/findWebElem.spec.js",
+      "file": "cypress/integration/testScripts/findWebElem.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a9f91c70-c839-40e2-9d17-31122fc339b4",
+          "title": "Finding diff WebElements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Handling tooltips",
+              "fullTitle": "Finding diff WebElements Handling tooltips",
+              "timedOut": null,
+              "duration": 850,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Modal & Overlays').click();\ncy.contains('Tooltip').click();\ncy.get('[data-name=\"menu-2\"]').click();\ncy.contains('nb-card', 'Colored Tooltips').contains('Default').click();\ncy.get('nb-tooltip').should('contain', 'This is a tooltip');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:4200/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:4200\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Finding diff WebElements`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:4200/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:4200\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Finding diff WebElements`\n    at http://localhost:63244/__cypress/runner/cypress_runner.js:159318:82\n    at visitFailedByErr (http://localhost:63244/__cypress/runner/cypress_runner.js:158668:12)\n    at http://localhost:63244/__cypress/runner/cypress_runner.js:159317:11\n    at tryCatcher (http://localhost:63244/__cypress/runner/cypress_runner.js:13022:23)\n    at Promise._settlePromiseFromHandler (http://localhost:63244/__cypress/runner/cypress_runner.js:10957:31)\n    at Promise._settlePromise (http://localhost:63244/__cypress/runner/cypress_runner.js:11014:18)\n    at Promise._settlePromise0 (http://localhost:63244/__cypress/runner/cypress_runner.js:11059:10)\n    at Promise._settlePromises (http://localhost:63244/__cypress/runner/cypress_runner.js:11135:18)\n    at _drainQueueStep (http://localhost:63244/__cypress/runner/cypress_runner.js:7729:12)\n    at _drainQueue (http://localhost:63244/__cypress/runner/cypress_runner.js:7722:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:63244/__cypress/runner/cypress_runner.js:7738:5)\n    at Async.drainQueues (http://localhost:63244/__cypress/runner/cypress_runner.js:7608:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:63244/__cypress/tests?p=cypress\\integration\\testScripts\\findWebElem.spec.js:102:8)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:4200\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1142:16)\n  ",
+                "diff": null
+              },
+              "uuid": "2c5203ff-9da4-4099-bdb2-a75552709882",
+              "parentUUID": "a9f91c70-c839-40e2-9d17-31122fc339b4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "2c5203ff-9da4-4099-bdb2-a75552709882"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 850,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ee3a164d-33b5-4d5a-83d5-14e432f53a7d",
+      "title": "",
+      "fullFile": "cypress/integration/testScripts/firstUrl.spec.js",
+      "file": "cypress/integration/testScripts/firstUrl.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4e522069-629d-473e-966f-219cfccb87e6",
+          "title": "First URL Sample",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "URL Test",
+              "fullTitle": "First URL Sample URL Test",
+              "timedOut": null,
+              "duration": 5297,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://books.toscrape.com/');\ncy.url().should('include', 'books'); // cy.contains('Travel').click()\ncy.get('a').contains('Travel').click();\ncy.log('Navigated to Travel Page....');",
+              "err": {},
+              "uuid": "054522b8-2f49-4ee3-986c-4d768cd7d14d",
+              "parentUUID": "4e522069-629d-473e-966f-219cfccb87e6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "054522b8-2f49-4ee3-986c-4d768cd7d14d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5297,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "a4c3814a-de04-403c-8f1e-b88702669207",
+      "title": "",
+      "fullFile": "cypress/integration/testScripts/findWebElem.spec.js",
+      "file": "cypress/integration/testScripts/findWebElem.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "535f2b12-8db7-4358-a3f7-085e35e1e4e0",
+          "title": "Finding diff WebElements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Handling tooltips",
+              "fullTitle": "Finding diff WebElements Handling tooltips",
+              "timedOut": null,
+              "duration": 794,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"F:\\\\Anandhi\\\\workspace\\\\cypressWSB1\\\\sample-first\\\\TestResults\\\\assets/testScripts/findWebElem.spec.js/Finding diff WebElements -- Handling tooltips (failed).png\"",
+              "code": "cy.contains('Modal & Overlays').click();\ncy.contains('Tooltip').click();\ncy.get('[data-name=\"menu-2\"]').click();\ncy.contains('nb-card', 'Colored Tooltips').contains('Default').click();\ncy.get('nb-tooltip').should('contain', 'This is a tooltip');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:4200/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:4200\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Finding diff WebElements`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:4200/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:4200\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Finding diff WebElements`\n    at http://localhost:49445/__cypress/runner/cypress_runner.js:159318:82\n    at visitFailedByErr (http://localhost:49445/__cypress/runner/cypress_runner.js:158668:12)\n    at http://localhost:49445/__cypress/runner/cypress_runner.js:159317:11\n    at tryCatcher (http://localhost:49445/__cypress/runner/cypress_runner.js:13022:23)\n    at Promise._settlePromiseFromHandler (http://localhost:49445/__cypress/runner/cypress_runner.js:10957:31)\n    at Promise._settlePromise (http://localhost:49445/__cypress/runner/cypress_runner.js:11014:18)\n    at Promise._settlePromise0 (http://localhost:49445/__cypress/runner/cypress_runner.js:11059:10)\n    at Promise._settlePromises (http://localhost:49445/__cypress/runner/cypress_runner.js:11135:18)\n    at _drainQueueStep (http://localhost:49445/__cypress/runner/cypress_runner.js:7729:12)\n    at _drainQueue (http://localhost:49445/__cypress/runner/cypress_runner.js:7722:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:49445/__cypress/runner/cypress_runner.js:7738:5)\n    at Async.drainQueues (http://localhost:49445/__cypress/runner/cypress_runner.js:7608:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:49445/__cypress/tests?p=cypress\\integration\\testScripts\\findWebElem.spec.js:102:8)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:4200\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1142:16)\n  ",
+                "diff": null
+              },
+              "uuid": "ef6a6ace-f368-4caf-af34-d9cbe3572321",
+              "parentUUID": "535f2b12-8db7-4358-a3f7-085e35e1e4e0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ef6a6ace-f368-4caf-af34-d9cbe3572321"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 794,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "da0f0459-dfd0-4a71-a573-1e1d155a81dc",
+      "title": "",
+      "fullFile": "cypress/integration/testScripts/firstUrl.spec.js",
+      "file": "cypress/integration/testScripts/firstUrl.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7df1527c-d9d3-4c19-9e66-e8f90149edc7",
+          "title": "First URL Sample",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "URL Test",
+              "fullTitle": "First URL Sample URL Test",
+              "timedOut": null,
+              "duration": 4576,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://books.toscrape.com/');\ncy.url().should('include', 'books'); // cy.contains('Travel').click()\ncy.get('a').contains('Travel').click();\ncy.log('Navigated to Travel Page....');",
+              "err": {},
+              "uuid": "3131575b-f3bf-497d-a8e4-17dc5ba3ab4d",
+              "parentUUID": "7df1527c-d9d3-4c19-9e66-e8f90149edc7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3131575b-f3bf-497d-a8e4-17dc5ba3ab4d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4576,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "a8bb25fd-ffe3-4676-9794-309c356fc89d",
+      "title": "",
+      "fullFile": "cypress/integration/testScripts/findWebElem.spec.js",
+      "file": "cypress/integration/testScripts/findWebElem.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3a38dece-e268-4fd4-b84c-846841e434ba",
+          "title": "Finding diff WebElements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Handling tooltips",
+              "fullTitle": "Finding diff WebElements Handling tooltips",
+              "timedOut": null,
+              "duration": 776,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"F:\\\\Anandhi\\\\workspace\\\\cypressWSB1\\\\sample-first\\\\TestResults\\\\assets/testScripts/findWebElem.spec.js/Finding diff WebElements -- Handling tooltips (failed).png\"",
+              "code": "cy.contains('Modal & Overlays').click();\ncy.contains('Tooltip').click();\ncy.get('[data-name=\"menu-2\"]').click();\ncy.contains('nb-card', 'Colored Tooltips').contains('Default').click();\ncy.get('nb-tooltip').should('contain', 'This is a tooltip');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:4200/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:4200\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Finding diff WebElements`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:4200/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:4200\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Finding diff WebElements`\n    at http://localhost:51205/__cypress/runner/cypress_runner.js:159318:82\n    at visitFailedByErr (http://localhost:51205/__cypress/runner/cypress_runner.js:158668:12)\n    at http://localhost:51205/__cypress/runner/cypress_runner.js:159317:11\n    at tryCatcher (http://localhost:51205/__cypress/runner/cypress_runner.js:13022:23)\n    at Promise._settlePromiseFromHandler (http://localhost:51205/__cypress/runner/cypress_runner.js:10957:31)\n    at Promise._settlePromise (http://localhost:51205/__cypress/runner/cypress_runner.js:11014:18)\n    at Promise._settlePromise0 (http://localhost:51205/__cypress/runner/cypress_runner.js:11059:10)\n    at Promise._settlePromises (http://localhost:51205/__cypress/runner/cypress_runner.js:11135:18)\n    at _drainQueueStep (http://localhost:51205/__cypress/runner/cypress_runner.js:7729:12)\n    at _drainQueue (http://localhost:51205/__cypress/runner/cypress_runner.js:7722:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51205/__cypress/runner/cypress_runner.js:7738:5)\n    at Async.drainQueues (http://localhost:51205/__cypress/runner/cypress_runner.js:7608:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:51205/__cypress/tests?p=cypress\\integration\\testScripts\\findWebElem.spec.js:102:8)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:4200\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1142:16)\n  ",
+                "diff": null
+              },
+              "uuid": "556680b7-f262-4443-8a63-cf2f1ee90143",
+              "parentUUID": "3a38dece-e268-4fd4-b84c-846841e434ba",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "556680b7-f262-4443-8a63-cf2f1ee90143"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 776,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ebb7d32d-21a5-45fa-ac3f-fbcb546849fa",
+      "title": "",
+      "fullFile": "cypress/integration/testScripts/firstUrl.spec.js",
+      "file": "cypress/integration/testScripts/firstUrl.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "05f3647e-a476-4687-b6fe-e7289d19d262",
+          "title": "First URL Sample",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "URL Test",
+              "fullTitle": "First URL Sample URL Test",
+              "timedOut": null,
+              "duration": 4381,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://books.toscrape.com/');\ncy.url().should('include', 'books'); // cy.contains('Travel').click()\ncy.get('a').contains('Travel').click();\ncy.log('Navigated to Travel Page....');",
+              "err": {},
+              "uuid": "fe5ceb5e-de3e-436a-884a-50c22cdb7340",
+              "parentUUID": "05f3647e-a476-4687-b6fe-e7289d19d262",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fe5ceb5e-de3e-436a-884a-50c22cdb7340"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4381,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "b28d5be7-f0d0-4e95-98b1-106b8f7e8b14",
+      "title": "",
+      "fullFile": "cypress/integration/testScripts/findWebElem.spec.js",
+      "file": "cypress/integration/testScripts/findWebElem.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dfba16c0-b6ee-4cbd-8a32-938d3eccb041",
+          "title": "Finding diff WebElements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Handling tooltips",
+              "fullTitle": "Finding diff WebElements Handling tooltips",
+              "timedOut": null,
+              "duration": 744,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"F:\\\\Anandhi\\\\workspace\\\\cypressWSB1\\\\sample-first\\\\TestResults\\\\assets/testScripts/findWebElem.spec.js/Finding diff WebElements -- Handling tooltips (failed).png\"",
+              "code": "cy.contains('Modal & Overlays').click();\ncy.contains('Tooltip').click();\ncy.get('[data-name=\"menu-2\"]').click();\ncy.contains('nb-card', 'Colored Tooltips').contains('Default').click();\ncy.get('nb-tooltip').should('contain', 'This is a tooltip');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:4200/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:4200\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Finding diff WebElements`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:4200/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:4200\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Finding diff WebElements`\n    at http://localhost:55801/__cypress/runner/cypress_runner.js:159318:82\n    at visitFailedByErr (http://localhost:55801/__cypress/runner/cypress_runner.js:158668:12)\n    at http://localhost:55801/__cypress/runner/cypress_runner.js:159317:11\n    at tryCatcher (http://localhost:55801/__cypress/runner/cypress_runner.js:13022:23)\n    at Promise._settlePromiseFromHandler (http://localhost:55801/__cypress/runner/cypress_runner.js:10957:31)\n    at Promise._settlePromise (http://localhost:55801/__cypress/runner/cypress_runner.js:11014:18)\n    at Promise._settlePromise0 (http://localhost:55801/__cypress/runner/cypress_runner.js:11059:10)\n    at Promise._settlePromises (http://localhost:55801/__cypress/runner/cypress_runner.js:11135:18)\n    at _drainQueueStep (http://localhost:55801/__cypress/runner/cypress_runner.js:7729:12)\n    at _drainQueue (http://localhost:55801/__cypress/runner/cypress_runner.js:7722:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:55801/__cypress/runner/cypress_runner.js:7738:5)\n    at Async.drainQueues (http://localhost:55801/__cypress/runner/cypress_runner.js:7608:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:55801/__cypress/tests?p=cypress\\integration\\testScripts\\findWebElem.spec.js:102:8)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:4200\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1142:16)\n  ",
+                "diff": null
+              },
+              "uuid": "a7ceb063-5e5d-463f-8f4d-2b89c1d62df9",
+              "parentUUID": "dfba16c0-b6ee-4cbd-8a32-938d3eccb041",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "a7ceb063-5e5d-463f-8f4d-2b89c1d62df9"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 744,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "bfc7bfb3-1b6b-4f8a-aeb4-e1ec144a2f4f",
+      "title": "",
+      "fullFile": "cypress/integration/testScripts/firstUrl.spec.js",
+      "file": "cypress/integration/testScripts/firstUrl.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8b44211c-174a-43e5-ba5a-1da4153e4b34",
+          "title": "First URL Sample",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "URL Test",
+              "fullTitle": "First URL Sample URL Test",
+              "timedOut": null,
+              "duration": 4486,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://books.toscrape.com/');\ncy.url().should('include', 'books'); // cy.contains('Travel').click()\ncy.get('a').contains('Travel').click();\ncy.log('Navigated to Travel Page....');",
+              "err": {},
+              "uuid": "419e85cb-ce2d-4b09-9b31-5673e2275b3b",
+              "parentUUID": "8b44211c-174a-43e5-ba5a-1da4153e4b34",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "419e85cb-ce2d-4b09-9b31-5673e2275b3b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4486,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "497fba5c-7f1e-4589-ab6f-987c3887484a",
+      "title": "",
+      "fullFile": "cypress/integration/testScripts/findWebElem.spec.js",
+      "file": "cypress/integration/testScripts/findWebElem.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9d7bed6d-a032-4825-9342-5488a17fdd2b",
+          "title": "Finding diff WebElements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Handling tooltips",
+              "fullTitle": "Finding diff WebElements Handling tooltips",
+              "timedOut": null,
+              "duration": 809,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Modal & Overlays').click();\ncy.contains('Tooltip').click();\ncy.get('[data-name=\"menu-2\"]').click();\ncy.contains('nb-card', 'Colored Tooltips').contains('Default').click();\ncy.get('nb-tooltip').should('contain', 'This is a tooltip');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:4200/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:4200\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Finding diff WebElements`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:4200/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:4200\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Finding diff WebElements`\n    at http://localhost:65255/__cypress/runner/cypress_runner.js:159318:82\n    at visitFailedByErr (http://localhost:65255/__cypress/runner/cypress_runner.js:158668:12)\n    at http://localhost:65255/__cypress/runner/cypress_runner.js:159317:11\n    at tryCatcher (http://localhost:65255/__cypress/runner/cypress_runner.js:13022:23)\n    at Promise._settlePromiseFromHandler (http://localhost:65255/__cypress/runner/cypress_runner.js:10957:31)\n    at Promise._settlePromise (http://localhost:65255/__cypress/runner/cypress_runner.js:11014:18)\n    at Promise._settlePromise0 (http://localhost:65255/__cypress/runner/cypress_runner.js:11059:10)\n    at Promise._settlePromises (http://localhost:65255/__cypress/runner/cypress_runner.js:11135:18)\n    at _drainQueueStep (http://localhost:65255/__cypress/runner/cypress_runner.js:7729:12)\n    at _drainQueue (http://localhost:65255/__cypress/runner/cypress_runner.js:7722:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:65255/__cypress/runner/cypress_runner.js:7738:5)\n    at Async.drainQueues (http://localhost:65255/__cypress/runner/cypress_runner.js:7608:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:65255/__cypress/tests?p=cypress\\integration\\testScripts\\findWebElem.spec.js:102:8)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:4200\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1142:16)\n  ",
+                "diff": null
+              },
+              "uuid": "ba130e49-b6b5-4883-a27c-bff0699eb35f",
+              "parentUUID": "9d7bed6d-a032-4825-9342-5488a17fdd2b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ba130e49-b6b5-4883-a27c-bff0699eb35f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 809,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.1.1"
+    }
+  }
+}

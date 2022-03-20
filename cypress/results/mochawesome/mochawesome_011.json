@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-03-19T08:14:51.225Z",
+    "end": "2022-03-19T08:14:58.966Z",
+    "duration": 7741,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bfc7bfb3-1b6b-4f8a-aeb4-e1ec144a2f4f",
+      "title": "",
+      "fullFile": "cypress/integration/testScripts/firstUrl.spec.js",
+      "file": "cypress/integration/testScripts/firstUrl.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8b44211c-174a-43e5-ba5a-1da4153e4b34",
+          "title": "First URL Sample",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "URL Test",
+              "fullTitle": "First URL Sample URL Test",
+              "timedOut": null,
+              "duration": 4486,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://books.toscrape.com/');\ncy.url().should('include', 'books'); // cy.contains('Travel').click()\ncy.get('a').contains('Travel').click();\ncy.log('Navigated to Travel Page....');",
+              "err": {},
+              "uuid": "419e85cb-ce2d-4b09-9b31-5673e2275b3b",
+              "parentUUID": "8b44211c-174a-43e5-ba5a-1da4153e4b34",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "419e85cb-ce2d-4b09-9b31-5673e2275b3b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4486,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.1.1"
+    }
+  }
+}

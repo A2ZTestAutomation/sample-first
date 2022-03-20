@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-03-19T09:03:53.133Z",
+    "end": "2022-03-19T09:04:16.393Z",
+    "duration": 23260,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3d8c9171-6b5b-4f3f-a303-b25bf308c3aa",
+      "title": "",
+      "fullFile": "cypress/integration/testScripts/async.spec.js",
+      "file": "cypress/integration/testScripts/async.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a6b75461-dae6-43d4-8a52-519c40025024",
+          "title": "First URL Sample",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "URL Test",
+              "fullTitle": "First URL Sample URL Test",
+              "timedOut": null,
+              "duration": 6110,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"F:\\\\Anandhi\\\\workspace\\\\cypressWSB1\\\\sample-first\\\\TestResults\\\\assets/testScripts/async.spec.js/First URL Sample -- URL Test (failed).png\"",
+              "code": "cy.visit('https://books.toscrape.com/');\ncy.contains('Travel').click();\ncy.url().should('include', 'travel');\nconsole.log('Visited Travel Page');\ncy.get('h1').should('be.visible');\ncy.get('.image_container').its('length').should('eq', 13);\ncy.get('h1').should('be.visible').then(() => {\n  console.log('After Test Execution');\n}); // console.log('After Test Execution')",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 11 to equal 13",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 11 to equal 13\n    at Context.eval (https://books.toscrape.com/__cypress/tests?p=cypress\\integration\\testScripts\\async.spec.js:112:46)",
+                "diff": "- 11\n+ 13\n"
+              },
+              "uuid": "01278f9d-a54c-4006-95fb-81667f8ca73e",
+              "parentUUID": "a6b75461-dae6-43d4-8a52-519c40025024",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "01278f9d-a54c-4006-95fb-81667f8ca73e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6110,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.1.1"
+    }
+  }
+}

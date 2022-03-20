@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-03-19T07:04:03.308Z",
+    "end": "2022-03-19T07:04:04.294Z",
+    "duration": 986,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2575dd94-d6af-4d81-a280-907e6ab0ddeb",
+      "title": "",
+      "fullFile": "cypress/integration/testScripts/findWebElem.spec.js",
+      "file": "cypress/integration/testScripts/findWebElem.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5a91a902-4816-478f-938e-a8049979c45b",
+          "title": "Finding diff WebElements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Handling tooltips",
+              "fullTitle": "Finding diff WebElements Handling tooltips",
+              "timedOut": null,
+              "duration": 915,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Modal & Overlays').click();\ncy.contains('Tooltip').click();\ncy.get('[data-name=\"menu-2\"]').click();\ncy.contains('nb-card', 'Colored Tooltips').contains('Default').click();\ncy.get('nb-tooltip').should('contain', 'This is a tooltip');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:4200/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:4200\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Finding diff WebElements`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost:4200/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:4200\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Finding diff WebElements`\n    at http://localhost:63990/__cypress/runner/cypress_runner.js:159318:82\n    at visitFailedByErr (http://localhost:63990/__cypress/runner/cypress_runner.js:158668:12)\n    at http://localhost:63990/__cypress/runner/cypress_runner.js:159317:11\n    at tryCatcher (http://localhost:63990/__cypress/runner/cypress_runner.js:13022:23)\n    at Promise._settlePromiseFromHandler (http://localhost:63990/__cypress/runner/cypress_runner.js:10957:31)\n    at Promise._settlePromise (http://localhost:63990/__cypress/runner/cypress_runner.js:11014:18)\n    at Promise._settlePromise0 (http://localhost:63990/__cypress/runner/cypress_runner.js:11059:10)\n    at Promise._settlePromises (http://localhost:63990/__cypress/runner/cypress_runner.js:11135:18)\n    at _drainQueueStep (http://localhost:63990/__cypress/runner/cypress_runner.js:7729:12)\n    at _drainQueue (http://localhost:63990/__cypress/runner/cypress_runner.js:7722:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:63990/__cypress/runner/cypress_runner.js:7738:5)\n    at Async.drainQueues (http://localhost:63990/__cypress/runner/cypress_runner.js:7608:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:63990/__cypress/tests?p=cypress\\integration\\testScripts\\findWebElem.spec.js:102:8)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:4200\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1142:16)\n  ",
+                "diff": null
+              },
+              "uuid": "e6dfaa63-81af-46d5-bf9b-32df0fca7df7",
+              "parentUUID": "5a91a902-4816-478f-938e-a8049979c45b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "e6dfaa63-81af-46d5-bf9b-32df0fca7df7"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 915,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.1.1"
+    }
+  }
+}
