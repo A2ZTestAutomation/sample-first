@@ -11,7 +11,7 @@ describe('First URL Sample', () => {
     })
     it('Verifying element', () => {
         cy.visit('http://example.com/')
-        cy.get('h2').should('be.visible')
+        cy.get('h1').should('be.visible')
 
     })
 })
